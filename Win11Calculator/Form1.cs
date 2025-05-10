@@ -6,8 +6,8 @@ namespace Win11Calculator;
 public partial class Form1 : Form
 {
     // TODO use this to clear solved equations
-    private bool _isPerformed = false;
-    String _operation = "";
+
+    String operation = "";
     String result;
 
     public Form1()
@@ -20,41 +20,10 @@ public partial class Form1 : Form
         throw new System.NotImplementedException();
     }
 
-
-    private void BtnAdd_Click(object sender, EventArgs e)
-    {
-        MoveInputToEq();
-        EquationLabel.Text += " + ";
-    }
-
-    private void DivideBtn_Click(object sender, EventArgs e)
-    {
-        MoveInputToEq();
-        EquationLabel.Text += " / ";
-    }
-
-    private void BtnMinus_Click(object sender, EventArgs e)
-    {
-        MoveInputToEq();
-        EquationLabel.Text += " - ";
-    }
-
-    private void BtnMultiply_Click(object sender, EventArgs e)
-    {
-        MoveInputToEq();
-        EquationLabel.Text += " * ";
-    }
-
     private void MoveInputToEq()
     {
-        EquationLabel.Text += txtInput.Text;
-        SetInputToZero();
-    }
-
-    private void BtnCE_Click(object sender, EventArgs e)
-    {
-        EquationLabel.Text = "";
-        SetInputToZero();
+        lblEquation.Text += txtInput.Text;
+        txtInput.Text = "0";
     }
 
     private void CheckInputValue()
@@ -69,28 +38,11 @@ public partial class Form1 : Form
         }
     }
 
-    private void NumZeroBtn_Click(object sender, EventArgs e)
+    private void btnEqual_Click(object sender, EventArgs e)
     {
-        txtInput.Text += '0';
-    }
-
-    private void SetInputToZero()
-    {
-        txtInput.Text = 0.ToString();
-    }
-
-    //private void BtnEquals_Click(object sender, EventArgs e)
-    //{
-    //    EquationLabel.Text += txtInput.Text;
-    //    string expression = EquationLabel.Text;
-    //    var result = new DataTable().Compute(expression, null);
-    //    txtInput.Text = result.ToString();
-    //}
-
-    private void BtnPoint_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        txtInput.Text += '.';
+        lblEquation.Text += txtInput.Text;
+        string expression = lblEquation.Text;
+        var result = new DataTable().Compute(expression, null);
     }
 
     private void button_click(object sender, EventArgs e)
@@ -100,20 +52,68 @@ public partial class Form1 : Form
         txtInput.Text += button.Text;
     }
 
-    private void operator_click (object sender, EventArgs e)
+    private void operator_click(object sender, EventArgs e)
     {
         Button button = (Button)sender;
-        if (result != "")
+
+        if (!string.IsNullOrEmpty(lblEquation.Text))
         {
-            btnEqual.PerformClick();
-            operation = button.Text;
-            isPerformed = true;
+            string expression = lblEquation.Text + txtInput.Text;
+            var result = new DataTable().Compute(expression, null);
+            lblEquation.Text = "";
+            txtInput.Text = result.ToString();
         }
-        else
+        txtInput.Text += button.Text;
+        MoveInputToEq();
+    }
+
+    private void btnCE_Click(object sender, EventArgs e)
+    {
+        txtInput.Text = "0";
+    }
+
+    private void btnPoint_click(object sender, EventArgs e)
+    {
+        if (!txtInput.Text.Contains('.'))
         {
-            operation = button.Text;
-            result = txtInput.Text;
-            isPerformed = true;
+            txtInput.Text += '.';
         }
+    }
+
+    private void btnClear_Click(object sender, EventArgs e)
+    {
+        txtInput.Text = "0";
+        lblEquation.Text = "";
+    }
+
+    private void btnBack_Click(object sender, EventArgs e)
+    {
+        string text = txtInput.Text;
+
+        text = text.Substring(0, text.Length - 1);
+        if (text.Length <= 0) text = "0";
+
+        txtInput.Text = text;
+
+    }
+
+    private void btnNegate_Click(object sender, EventArgs e)
+    {
+        string text = txtInput.Text;
+
+        if (double.Parse(text) != 0)
+        {
+            if (text[0] == '-')
+            {
+                text = text.Substring(2, text.Length-1);
+            }
+
+            else
+            {
+                text = "-" + text;
+            }
+        }
+
+        txtInput.Text = text;
     }
 }
