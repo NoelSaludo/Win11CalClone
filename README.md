@@ -11,15 +11,15 @@ addition, subraction, multiplication, and division.
 ### File Structure
 ```
 project
-| -- Win11Calculator
+| -- PastelCalculator
 |    | -- Form1.cs
 |    | -- Form1.designer.cs
 |    | -- Form1.resx
 | -- archives
-|    | -- Win11Calculator_addition.png
-|    | -- Win11Calculator_subtraction.png
-|    | -- Win11Calculator_multiplication.png
-|    | -- Win11Calculator_division.png
+|    | -- addition.png
+|    | -- subtraction.png
+|    | -- multiplication.png
+|    | -- division.png
 ```
 ## Installation
 ### Pre-requisites
@@ -41,16 +41,16 @@ These are some screenshots taken using the program.
 
 **Addition**
 
-![Win11Calculator_addition.png](archives/Win11Calculator_addition.png)
+![addition.png](archives/addition.png)
 
 **Subtraction**
 
-![Win11Calculator_subtraction.png](archives/Win11Calculator_subtraction.png)
+![subtraction.png](archives/subtraction.png)
 
 **Multiply**
 
-![Win11Calculator_multiply.png](archives/Win11Calculator_multiply.png)
+![multiply.png](archives/multiply.png)
 
 **Division**
 
-![Win11Calculator_division.png](archives/Win11Calculator_division.png)
+![division.png](archives/division.png)

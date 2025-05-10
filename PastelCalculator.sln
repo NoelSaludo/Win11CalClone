@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win11Calculator", "Win11Calculator\Win11Calculator.csproj", "{073F2DBF-B108-4C50-A3AC-191C162497F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PastelCalculator", "PastelCalculator\PastelCalculator.csproj", "{073F2DBF-B108-4C50-A3AC-191C162497F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
