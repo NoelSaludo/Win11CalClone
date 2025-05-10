@@ -9,6 +9,7 @@ public partial class Form1 : Form
 
     String operation = "";
     String result;
+    bool isOperating = false;
 
     public Form1()
     {
@@ -43,6 +44,8 @@ public partial class Form1 : Form
         lblEquation.Text += txtInput.Text;
         string expression = lblEquation.Text;
         var result = new DataTable().Compute(expression, null);
+        lblEquation.Text = result.ToString();
+        txtInput.Text = "0";
     }
 
     private void button_click(object sender, EventArgs e)
@@ -55,6 +58,7 @@ public partial class Form1 : Form
     private void operator_click(object sender, EventArgs e)
     {
         Button button = (Button)sender;
+        isOperating = true;
 
         if (!string.IsNullOrEmpty(lblEquation.Text))
         {
@@ -62,7 +66,7 @@ public partial class Form1 : Form
             var result = new DataTable().Compute(expression, null);
             lblEquation.Text = "";
             txtInput.Text = result.ToString();
-        }
+        } 
         txtInput.Text += button.Text;
         MoveInputToEq();
     }
