@@ -6,14 +6,16 @@ namespace Win11Calculator;
 public partial class Form1 : Form
 {
     // TODO use this to clear solved equations
-    private bool _isSolved = false;
-    
+    private bool _isPerformed = false;
+    String _operation = "";
+    String result;
+
     public Form1()
     {
         InitializeComponent();
     }
 
-    private void InputLabel_Click(object sender, EventArgs e)
+    private void txtInput_Click(object sender, EventArgs e)
     {
         throw new System.NotImplementedException();
     }
@@ -24,13 +26,13 @@ public partial class Form1 : Form
         MoveInputToEq();
         EquationLabel.Text += " + ";
     }
-    
+
     private void DivideBtn_Click(object sender, EventArgs e)
     {
         MoveInputToEq();
         EquationLabel.Text += " / ";
     }
-    
+
     private void BtnMinus_Click(object sender, EventArgs e)
     {
         MoveInputToEq();
@@ -45,7 +47,7 @@ public partial class Form1 : Form
 
     private void MoveInputToEq()
     {
-        EquationLabel.Text += InputLabel.Text;
+        EquationLabel.Text += txtInput.Text;
         SetInputToZero();
     }
 
@@ -58,90 +60,60 @@ public partial class Form1 : Form
     private void CheckInputValue()
     {
         int val;
-        if (int.TryParse(InputLabel.Text, out val))
+        if (int.TryParse(txtInput.Text, out val))
         {
             if (val == 0)
             {
-                InputLabel.Text = String.Empty;
+                txtInput.Text = String.Empty;
             }
         }
     }
 
     private void NumZeroBtn_Click(object sender, EventArgs e)
     {
-        InputLabel.Text += '0';
+        txtInput.Text += '0';
     }
 
     private void SetInputToZero()
     {
-        InputLabel.Text = 0.ToString();
+        txtInput.Text = 0.ToString();
     }
 
-    private void BtnOne_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 1.ToString();
-    }
-
-    private void BtnTwo_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 2.ToString();
-    }
-
-    private void BtnThree_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 3.ToString();
-    }
-
-    private void BtnFour_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 4.ToString();
-    }
-
-    private void BtnFive_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 5.ToString();
-    }
-
-    private void BtnSix_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 6.ToString();
-    }
-
-    private void BtnSeven_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 7.ToString();
-    }
-
-    private void BtnEight_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 8.ToString();
-    }
-
-    private void BtnNine_Click(object sender, EventArgs e)
-    {
-        CheckInputValue();
-        InputLabel.Text += 9.ToString();
-    }
-
-    private void BtnEquals_Click(object sender, EventArgs e)
-    {
-        EquationLabel.Text += InputLabel.Text;
-        string expression = EquationLabel.Text;
-        var result = new DataTable().Compute(expression, null);
-        InputLabel.Text = result.ToString();
-    }
+    //private void BtnEquals_Click(object sender, EventArgs e)
+    //{
+    //    EquationLabel.Text += txtInput.Text;
+    //    string expression = EquationLabel.Text;
+    //    var result = new DataTable().Compute(expression, null);
+    //    txtInput.Text = result.ToString();
+    //}
 
     private void BtnPoint_Click(object sender, EventArgs e)
     {
         CheckInputValue();
-        InputLabel.Text += '.';
+        txtInput.Text += '.';
+    }
+
+    private void button_click(object sender, EventArgs e)
+    {
+        CheckInputValue();
+        Button button = (Button)sender;
+        txtInput.Text += button.Text;
+    }
+
+    private void operator_click (object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        if (result != "")
+        {
+            btnEqual.PerformClick();
+            operation = button.Text;
+            isPerformed = true;
+        }
+        else
+        {
+            operation = button.Text;
+            result = txtInput.Text;
+            isPerformed = true;
+        }
     }
 }
