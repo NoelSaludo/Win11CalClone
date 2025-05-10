@@ -52,6 +52,13 @@ public partial class Form1 : Form
     {
         CheckInputValue();
         Button button = (Button)sender;
+        if (isResult)
+        {
+            lblEquation.Text = String.Empty;
+            txtInput.Text = String.Empty;
+            isResult = false;
+        }
+
         txtInput.Text += button.Text;
     }
 
@@ -112,7 +119,7 @@ public partial class Form1 : Form
         {
             if (text[0] == '-')
             {
-                text = text.Substring(2, text.Length-1);
+                text = text.Remove(0, 1);
             }
 
             else

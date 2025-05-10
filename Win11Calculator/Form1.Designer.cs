@@ -29,29 +29,29 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        panel1 = new Panel();
-        txtInput = new TextBox();
-        lblEquation = new Label();
-        btn0 = new Button();
-        btn3 = new Button();
-        btnEqual = new Button();
-        btnAdd = new Button();
-        btn6 = new Button();
-        btn5 = new Button();
-        btn4 = new Button();
-        btnMinus = new Button();
-        btn9 = new Button();
-        btn8 = new Button();
-        btn7 = new Button();
-        btnMultiply = new Button();
-        btn1 = new Button();
-        btn2 = new Button();
-        btnDivide = new Button();
-        btnCE = new Button();
-        btnPoint = new Button();
-        btnNegate = new Button();
-        btnClear = new Button();
-        btnBack = new Button();
+        panel1 = new System.Windows.Forms.Panel();
+        txtInput = new System.Windows.Forms.TextBox();
+        lblEquation = new System.Windows.Forms.Label();
+        btn0 = new System.Windows.Forms.Button();
+        btn3 = new System.Windows.Forms.Button();
+        btnEqual = new System.Windows.Forms.Button();
+        btnAdd = new System.Windows.Forms.Button();
+        btn6 = new System.Windows.Forms.Button();
+        btn5 = new System.Windows.Forms.Button();
+        btn4 = new System.Windows.Forms.Button();
+        btnMinus = new System.Windows.Forms.Button();
+        btn9 = new System.Windows.Forms.Button();
+        btn8 = new System.Windows.Forms.Button();
+        btn7 = new System.Windows.Forms.Button();
+        btnMultiply = new System.Windows.Forms.Button();
+        btn1 = new System.Windows.Forms.Button();
+        btn2 = new System.Windows.Forms.Button();
+        btnDivide = new System.Windows.Forms.Button();
+        btnCE = new System.Windows.Forms.Button();
+        btnPoint = new System.Windows.Forms.Button();
+        btnNegate = new System.Windows.Forms.Button();
+        btnClear = new System.Windows.Forms.Button();
+        btnBack = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         SuspendLayout();
         // 
@@ -59,43 +59,43 @@ partial class Form1
         // 
         panel1.Controls.Add(txtInput);
         panel1.Controls.Add(lblEquation);
-        panel1.Dock = DockStyle.Top;
-        panel1.Location = new Point(0, 0);
-        panel1.Margin = new Padding(6);
+        panel1.Dock = System.Windows.Forms.DockStyle.Top;
+        panel1.Location = new System.Drawing.Point(0, 0);
+        panel1.Margin = new System.Windows.Forms.Padding(6);
         panel1.Name = "panel1";
-        panel1.Size = new Size(750, 254);
+        panel1.Size = new System.Drawing.Size(751, 254);
         panel1.TabIndex = 0;
         // 
         // txtInput
         // 
-        txtInput.BackColor = SystemColors.ControlLightLight;
-        txtInput.BorderStyle = BorderStyle.None;
-        txtInput.Font = new Font("Segoe UI", 26F);
-        txtInput.Location = new Point(3, 143);
+        txtInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
+        txtInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+        txtInput.Font = new System.Drawing.Font("Segoe UI", 26F);
+        txtInput.Location = new System.Drawing.Point(3, 143);
         txtInput.Multiline = true;
         txtInput.Name = "txtInput";
         txtInput.ReadOnly = true;
-        txtInput.Size = new Size(744, 115);
+        txtInput.Size = new System.Drawing.Size(744, 115);
         txtInput.TabIndex = 2;
         txtInput.Text = "0";
-        txtInput.TextAlign = HorizontalAlignment.Right;
+        txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // lblEquation
         // 
-        lblEquation.Dock = DockStyle.Top;
-        lblEquation.Location = new Point(0, 0);
-        lblEquation.Margin = new Padding(6, 0, 6, 0);
+        lblEquation.Dock = System.Windows.Forms.DockStyle.Top;
+        lblEquation.Location = new System.Drawing.Point(0, 0);
+        lblEquation.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
         lblEquation.Name = "lblEquation";
-        lblEquation.Size = new Size(750, 113);
+        lblEquation.Size = new System.Drawing.Size(751, 113);
         lblEquation.TabIndex = 0;
-        lblEquation.TextAlign = ContentAlignment.BottomRight;
+        lblEquation.TextAlign = System.Drawing.ContentAlignment.BottomRight;
         // 
         // btn0
         // 
-        btn0.Location = new Point(188, 1041);
-        btn0.Margin = new Padding(6);
+        btn0.Location = new System.Drawing.Point(189, 989);
+        btn0.Margin = new System.Windows.Forms.Padding(6);
         btn0.Name = "btn0";
-        btn0.Size = new Size(186, 192);
+        btn0.Size = new System.Drawing.Size(186, 192);
         btn0.TabIndex = 2;
         btn0.Text = "0";
         btn0.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@ partial class Form1
         // 
         // btn3
         // 
-        btn3.Location = new Point(375, 849);
-        btn3.Margin = new Padding(6);
+        btn3.Location = new System.Drawing.Point(376, 797);
+        btn3.Margin = new System.Windows.Forms.Padding(6);
         btn3.Name = "btn3";
-        btn3.Size = new Size(186, 192);
+        btn3.Size = new System.Drawing.Size(186, 192);
         btn3.TabIndex = 3;
         btn3.Text = "3";
         btn3.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@ partial class Form1
         // 
         // btnEqual
         // 
-        btnEqual.Location = new Point(563, 1041);
-        btnEqual.Margin = new Padding(6);
+        btnEqual.Location = new System.Drawing.Point(564, 989);
+        btnEqual.Margin = new System.Windows.Forms.Padding(6);
         btnEqual.Name = "btnEqual";
-        btnEqual.Size = new Size(186, 192);
+        btnEqual.Size = new System.Drawing.Size(186, 192);
         btnEqual.TabIndex = 4;
         btnEqual.Text = "=";
         btnEqual.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@ partial class Form1
         // 
         // btnAdd
         // 
-        btnAdd.Location = new Point(563, 849);
-        btnAdd.Margin = new Padding(6);
+        btnAdd.Location = new System.Drawing.Point(564, 797);
+        btnAdd.Margin = new System.Windows.Forms.Padding(6);
         btnAdd.Name = "btnAdd";
-        btnAdd.Size = new Size(186, 192);
+        btnAdd.Size = new System.Drawing.Size(186, 192);
         btnAdd.TabIndex = 8;
         btnAdd.Text = "+";
         btnAdd.UseVisualStyleBackColor = true;
@@ -136,10 +136,10 @@ partial class Form1
         // 
         // btn6
         // 
-        btn6.Location = new Point(375, 655);
-        btn6.Margin = new Padding(6);
+        btn6.Location = new System.Drawing.Point(376, 603);
+        btn6.Margin = new System.Windows.Forms.Padding(6);
         btn6.Name = "btn6";
-        btn6.Size = new Size(186, 192);
+        btn6.Size = new System.Drawing.Size(186, 192);
         btn6.TabIndex = 7;
         btn6.Text = "6";
         btn6.UseVisualStyleBackColor = true;
@@ -147,10 +147,10 @@ partial class Form1
         // 
         // btn5
         // 
-        btn5.Location = new Point(188, 655);
-        btn5.Margin = new Padding(6);
+        btn5.Location = new System.Drawing.Point(189, 603);
+        btn5.Margin = new System.Windows.Forms.Padding(6);
         btn5.Name = "btn5";
-        btn5.Size = new Size(186, 192);
+        btn5.Size = new System.Drawing.Size(186, 192);
         btn5.TabIndex = 6;
         btn5.Text = "5";
         btn5.UseVisualStyleBackColor = true;
@@ -158,10 +158,10 @@ partial class Form1
         // 
         // btn4
         // 
-        btn4.Location = new Point(0, 655);
-        btn4.Margin = new Padding(6);
+        btn4.Location = new System.Drawing.Point(1, 603);
+        btn4.Margin = new System.Windows.Forms.Padding(6);
         btn4.Name = "btn4";
-        btn4.Size = new Size(186, 192);
+        btn4.Size = new System.Drawing.Size(186, 192);
         btn4.TabIndex = 5;
         btn4.Text = "4";
         btn4.UseVisualStyleBackColor = true;
@@ -169,10 +169,10 @@ partial class Form1
         // 
         // btnMinus
         // 
-        btnMinus.Location = new Point(563, 655);
-        btnMinus.Margin = new Padding(6);
+        btnMinus.Location = new System.Drawing.Point(564, 603);
+        btnMinus.Margin = new System.Windows.Forms.Padding(6);
         btnMinus.Name = "btnMinus";
-        btnMinus.Size = new Size(186, 192);
+        btnMinus.Size = new System.Drawing.Size(186, 192);
         btnMinus.TabIndex = 12;
         btnMinus.Text = "-";
         btnMinus.UseVisualStyleBackColor = true;
@@ -180,10 +180,10 @@ partial class Form1
         // 
         // btn9
         // 
-        btn9.Location = new Point(375, 461);
-        btn9.Margin = new Padding(6);
+        btn9.Location = new System.Drawing.Point(376, 409);
+        btn9.Margin = new System.Windows.Forms.Padding(6);
         btn9.Name = "btn9";
-        btn9.Size = new Size(186, 192);
+        btn9.Size = new System.Drawing.Size(186, 192);
         btn9.TabIndex = 11;
         btn9.Text = "9";
         btn9.UseVisualStyleBackColor = true;
@@ -191,10 +191,10 @@ partial class Form1
         // 
         // btn8
         // 
-        btn8.Location = new Point(188, 461);
-        btn8.Margin = new Padding(6);
+        btn8.Location = new System.Drawing.Point(189, 409);
+        btn8.Margin = new System.Windows.Forms.Padding(6);
         btn8.Name = "btn8";
-        btn8.Size = new Size(186, 192);
+        btn8.Size = new System.Drawing.Size(186, 192);
         btn8.TabIndex = 10;
         btn8.Text = "8";
         btn8.UseVisualStyleBackColor = true;
@@ -202,10 +202,10 @@ partial class Form1
         // 
         // btn7
         // 
-        btn7.Location = new Point(0, 461);
-        btn7.Margin = new Padding(6);
+        btn7.Location = new System.Drawing.Point(1, 409);
+        btn7.Margin = new System.Windows.Forms.Padding(6);
         btn7.Name = "btn7";
-        btn7.Size = new Size(186, 192);
+        btn7.Size = new System.Drawing.Size(186, 192);
         btn7.TabIndex = 9;
         btn7.Text = "7";
         btn7.UseVisualStyleBackColor = true;
@@ -213,10 +213,10 @@ partial class Form1
         // 
         // btnMultiply
         // 
-        btnMultiply.Location = new Point(563, 461);
-        btnMultiply.Margin = new Padding(6);
+        btnMultiply.Location = new System.Drawing.Point(564, 409);
+        btnMultiply.Margin = new System.Windows.Forms.Padding(6);
         btnMultiply.Name = "btnMultiply";
-        btnMultiply.Size = new Size(186, 192);
+        btnMultiply.Size = new System.Drawing.Size(186, 192);
         btnMultiply.TabIndex = 16;
         btnMultiply.Text = "*";
         btnMultiply.UseVisualStyleBackColor = true;
@@ -224,10 +224,10 @@ partial class Form1
         // 
         // btn1
         // 
-        btn1.Location = new Point(0, 849);
-        btn1.Margin = new Padding(6);
+        btn1.Location = new System.Drawing.Point(1, 797);
+        btn1.Margin = new System.Windows.Forms.Padding(6);
         btn1.Name = "btn1";
-        btn1.Size = new Size(186, 192);
+        btn1.Size = new System.Drawing.Size(186, 192);
         btn1.TabIndex = 17;
         btn1.Text = "1";
         btn1.UseVisualStyleBackColor = true;
@@ -235,10 +235,10 @@ partial class Form1
         // 
         // btn2
         // 
-        btn2.Location = new Point(188, 849);
-        btn2.Margin = new Padding(6);
+        btn2.Location = new System.Drawing.Point(189, 797);
+        btn2.Margin = new System.Windows.Forms.Padding(6);
         btn2.Name = "btn2";
-        btn2.Size = new Size(186, 192);
+        btn2.Size = new System.Drawing.Size(186, 192);
         btn2.TabIndex = 18;
         btn2.Text = "2";
         btn2.UseVisualStyleBackColor = true;
@@ -246,10 +246,10 @@ partial class Form1
         // 
         // btnDivide
         // 
-        btnDivide.Location = new Point(0, 267);
-        btnDivide.Margin = new Padding(6);
+        btnDivide.Location = new System.Drawing.Point(1, 215);
+        btnDivide.Margin = new System.Windows.Forms.Padding(6);
         btnDivide.Name = "btnDivide";
-        btnDivide.Size = new Size(186, 192);
+        btnDivide.Size = new System.Drawing.Size(186, 192);
         btnDivide.TabIndex = 22;
         btnDivide.Text = "/";
         btnDivide.UseVisualStyleBackColor = true;
@@ -257,10 +257,10 @@ partial class Form1
         // 
         // btnCE
         // 
-        btnCE.Location = new Point(188, 267);
-        btnCE.Margin = new Padding(6);
+        btnCE.Location = new System.Drawing.Point(189, 215);
+        btnCE.Margin = new System.Windows.Forms.Padding(6);
         btnCE.Name = "btnCE";
-        btnCE.Size = new Size(186, 192);
+        btnCE.Size = new System.Drawing.Size(186, 192);
         btnCE.TabIndex = 20;
         btnCE.Text = "CE";
         btnCE.UseVisualStyleBackColor = true;
@@ -268,10 +268,10 @@ partial class Form1
         // 
         // btnPoint
         // 
-        btnPoint.Location = new Point(375, 1041);
-        btnPoint.Margin = new Padding(6);
+        btnPoint.Location = new System.Drawing.Point(376, 989);
+        btnPoint.Margin = new System.Windows.Forms.Padding(6);
         btnPoint.Name = "btnPoint";
-        btnPoint.Size = new Size(186, 192);
+        btnPoint.Size = new System.Drawing.Size(186, 192);
         btnPoint.TabIndex = 23;
         btnPoint.Text = ".";
         btnPoint.UseVisualStyleBackColor = true;
@@ -279,10 +279,10 @@ partial class Form1
         // 
         // btnNegate
         // 
-        btnNegate.Location = new Point(0, 1041);
-        btnNegate.Margin = new Padding(6);
+        btnNegate.Location = new System.Drawing.Point(1, 989);
+        btnNegate.Margin = new System.Windows.Forms.Padding(6);
         btnNegate.Name = "btnNegate";
-        btnNegate.Size = new Size(186, 192);
+        btnNegate.Size = new System.Drawing.Size(186, 192);
         btnNegate.TabIndex = 24;
         btnNegate.Text = "+/-";
         btnNegate.UseVisualStyleBackColor = true;
@@ -290,10 +290,10 @@ partial class Form1
         // 
         // btnClear
         // 
-        btnClear.Location = new Point(375, 267);
-        btnClear.Margin = new Padding(6);
+        btnClear.Location = new System.Drawing.Point(376, 215);
+        btnClear.Margin = new System.Windows.Forms.Padding(6);
         btnClear.Name = "btnClear";
-        btnClear.Size = new Size(186, 192);
+        btnClear.Size = new System.Drawing.Size(186, 192);
         btnClear.TabIndex = 25;
         btnClear.Text = "C";
         btnClear.UseVisualStyleBackColor = true;
@@ -301,10 +301,10 @@ partial class Form1
         // 
         // btnBack
         // 
-        btnBack.Location = new Point(565, 267);
-        btnBack.Margin = new Padding(6);
+        btnBack.Location = new System.Drawing.Point(566, 215);
+        btnBack.Margin = new System.Windows.Forms.Padding(6);
         btnBack.Name = "btnBack";
-        btnBack.Size = new Size(186, 192);
+        btnBack.Size = new System.Drawing.Size(186, 192);
         btnBack.TabIndex = 26;
         btnBack.Text = "<-";
         btnBack.UseVisualStyleBackColor = true;
@@ -312,10 +312,10 @@ partial class Form1
         // 
         // Form1
         // 
-        AutoScaleDimensions = new SizeF(13F, 32F);
-        AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.White;
-        ClientSize = new Size(750, 1239);
+        AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        BackColor = System.Drawing.Color.White;
+        ClientSize = new System.Drawing.Size(751, 1181);
         Controls.Add(btnBack);
         Controls.Add(btnClear);
         Controls.Add(btnNegate);
@@ -337,11 +337,10 @@ partial class Form1
         Controls.Add(btn3);
         Controls.Add(btn0);
         Controls.Add(panel1);
-        FormBorderStyle = FormBorderStyle.FixedSingle;
-        Location = new Point(15, 15);
-        Margin = new Padding(6);
-        Name = "Form1";
-        StartPosition = FormStartPosition.CenterScreen;
+        FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        Location = new System.Drawing.Point(15, 15);
+        Margin = new System.Windows.Forms.Padding(6);
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "Basic Calculator";
         panel1.ResumeLayout(false);
         panel1.PerformLayout();
