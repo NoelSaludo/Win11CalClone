@@ -313,7 +313,7 @@ partial class Form1
         btnCE.Name = "btnCE";
         btnCE.Size = new System.Drawing.Size(207, 101);
         btnCE.TabIndex = 20;
-        btnCE.Text = "CLEAR";
+        btnCE.Text = "CE";
         btnCE.UseVisualStyleBackColor = false;
         btnCE.Click += btnCE_Click;
         // 
