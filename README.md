@@ -21,6 +21,7 @@ project
 |    | -- Win11Calculator_multiplication.png
 |    | -- Win11Calculator_division.png
 ```
+## Installation
 ### Pre-requisites
 - .NET SDK version 8 and above
 
